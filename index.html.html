@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi niña de rizos 🥺💝</title>
+    <style>
+        /* Fondo y estilo general */
+        body {
+            background-color: #E6E6FA;
+            color: #d1105a; /* Color rosa romántico */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            padding: 50px 20px;
+        }
+
+        /* Contenedor de la carta */
+        .carta {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(209, 16, 90, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 { font-size: 38px; margin-bottom: 10px; }
+        h2 { font-size: 24px; font-weight: normal; font-style: italic; }
+
+        /* Efecto de Corazones Flotantes */
+        .corazon {
+            position: fixed;
+            top: -10%;
+            font-size: 20px;
+            user-select: none;
+            z-index: 1;
+            animation: caida linear forwards;
+        }
+
+        @keyframes caida {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        img {
+            border-radius: 20px;
+            border: 8px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function crearCorazon() {
+            const corazon = document.createElement('div');
+            corazon.classList.add('corazon');
+            corazon.innerHTML = '❤️';
+            corazon.style.left = Math.random() * 100 + 'vw';
+            corazon.style.animationDuration = Math.random() * 3 + 2 + 's';
+            corazon.style.opacity = Math.random();
+            document.body.appendChild(corazon);
+
+            setTimeout(() => {
+                corazon.remove();
+            }, 5000);
+        }
+        setInterval(crearCorazon, 300);
+    </script>
+
+    <div class="carta">
+        <h1>Scarleth Dominguez 🥺💝</h1>   
+        <h2>Te Amo Mucho mi niña linda 🥺💝</h2>
+
+        <p style="line-height: 1.8; font-size: 19px;">
+            Te Quiero mucho mi niña, eres lo mejor que me ha pasado, te agradezco por todo lo que haces por mi 🥺<br>
+            de verdad muchas gracias siempre estaré para ti en las buenas y en las malas 💝<br><br>
+            
+            Eres la niña de mis ojos, la princesa de mi cuento, la protagonista de mi vida, la mujer que me hace feliz cada día 🥺💝.<br><br>
+            
+            Quiero que sigamos juntos para siempre, amarte en todas las vidas posibles. Perdóname si cometo errores, no soy perfecto, pero trato de serlo para ti.<br><br>
+            
+            Sé que sobrepienso las cosas porque te amo y no quiero perderte nunca. Si tú te vas, se va mi vida entera contigo. Tú eres mi complemento, mi otra mitad.<br><br>
+            
+            Tus ojitos son el reflejo de mi alma y tu sonrisa mi motor para seguir adelante.<br><br>
+            
+            <b>Amo cada detalle de ti. Te Amo, Te Amo, Te Amo 💝</b>
+        </p>
+
+        <hr style="border: 0; border-top: 2px solid #ffb6c1; margin: 30px 0;">
+
+        <p style="font-size: 22px; font-weight: bold; color: #b0084a;">
+            ¿Aceptarías empezar una vida conmigo?<br>
+            ¿Aceptarías ser el Amor de mi vida? 🥺💝
+        </p>
+    </div>
+
+    <img src="Fto.JPG" alt="Mi niña" width="320">
+
+</body>
+</html>
