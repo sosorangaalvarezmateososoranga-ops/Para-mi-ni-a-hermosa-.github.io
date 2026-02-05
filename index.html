@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
         /* Fondo y estilo general */
         body {
             background-color: #E6E6FA;
-            color: #d1105a; /* Color rosa romántico */
+            color: #d1105a; 
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 0;
@@ -15,11 +14,21 @@
             padding: 50px 20px;
         }
 
+        /* Imágenes de Snoopy en las esquinas */
+        .snoopy {
+            position: fixed;
+            width: 120px; /* Tamaño de los Snoopys */
+            z-index: 3;
+            pointer-events: none; /* Para que no estorben al hacer clic */
+        }
+        .snoopy-izq { bottom: 20px; left: 20px; }
+        .snoopy-der { top: 20px; right: 20px; transform: scaleX(-1); }
+
         /* Contenedor de la carta */
         .carta {
             max-width: 650px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 40px;
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(209, 16, 90, 0.1);
@@ -46,7 +55,8 @@
             }
         }
 
-        img {
+        /* Foto de tu chica */
+        .foto-chica {
             border-radius: 20px;
             border: 8px solid white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -56,12 +66,15 @@
             z-index: 2;
         }
 
-        img:hover {
+        .foto-chica:hover {
             transform: scale(1.05);
         }
     </style>
 </head>
 <body>
+
+    <img src="https://i.pinimg.com/originals/ae/f6/85/aef685652594191c09930419277f6f19.png" class="snoopy snoopy-izq" alt="Snoopy Amor">
+    <img src="https://i.ibb.co/Vv0F6S8/snoopy-heart.png" class="snoopy snoopy-der" alt="Snoopy Corazon">
 
     <script>
         function crearCorazon() {
@@ -111,7 +124,7 @@
         </p>
     </div>
 
-    <img src="Fto.JPG" alt="Mi niña" width="320">
+    <img src="Fto.JPG" class="foto-chica" alt="Mi niña hermosa" width="320">
 
 </body>
 </html>
